@@ -4,6 +4,7 @@
 Vagrant.configure(2) do |config|
   # Use box from Atlas
   # config.vm.box = "AndrewDryga/vagrant-box-osx"
+  config.vm.provision :shell, path: "bootstrap.sh", privileged: false
 
   # Use box from url (if Atlas is down)
   config.vm.box = "http://files.dryga.com/boxes/osx-sierra-0.3.1.box"
